@@ -9,7 +9,7 @@ const rolledNumber = ref(1)
 const showInstructions = ref(false)
 
 const switchChoice = ref<string | null>(null)
-const awaitingSwitch = ref(true)
+
 
 function randomSwitchGuess() {
   const switchRandom = Math.floor(Math.random() * 2)
@@ -78,7 +78,7 @@ function rollDice() {
       </div>
     </div>
 
-    <ChipSwitch v-if="awaitingSwitch" v-model="switchChoice" />
+    <ChipSwitch  v-model="switchChoice" />
 
     <div class="dice" @click="rollDice">
       <h1>{{ rolledNumber }}</h1>
@@ -204,7 +204,7 @@ button.instructions {
 button.instructions:hover {
   background-color: black;
   color: white;
-  border: 1px solid white;
+  border: none;
 }
 
 /* Responsive Styles */

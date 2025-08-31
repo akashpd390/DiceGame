@@ -5,14 +5,14 @@
     <div
       class="chip"
       :class="{ selected: modelValue === 'higher' }"
-      @click="$emit('update:modelValue', 'higher')"
+
     >
       Higher
     </div>
     <div
       class="chip"
       :class="{ selected: modelValue === 'lower' }"
-      @click="$emit('update:modelValue', 'lower')"
+
     >
       Lower
     </div>
@@ -21,7 +21,7 @@
 
 <script setup lang="ts">
 defineProps<{ modelValue: string | null }>()
-defineEmits(['update:modelValue'])
+
 </script>
 
 <style scoped>
@@ -34,7 +34,7 @@ defineEmits(['update:modelValue'])
   padding: 8px 16px;
   border-radius: 24px;
   border: 1.5px solid black;
-  cursor: pointer;
+
   user-select: none;
   font-weight: 600;
   transition: background-color 0.3s, color 0.3s;
